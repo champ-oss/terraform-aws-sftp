@@ -5,8 +5,8 @@ locals {
     creator   = "terraform"
     component = "sftp"
   }
-  name   = var.name != null ? var.name : "sftp-${random_string.this.result}"
-  bucket = var.bucket != null ? var.bucket : "${var.git}-${local.name}"
+  name   = var.name != "" ? var.name : "sftp-${random_string.this.result}"
+  bucket = var.bucket != "" ? var.bucket : "${var.git}-${local.name}"
 }
 
 data "aws_region" "this" {}
