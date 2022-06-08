@@ -5,7 +5,7 @@ output "name" {
 
 output "dns" {
   description = "DNS of SFTP server or Route53 CNAME"
-  value       = var.domain_name != null ? var.domain_name : aws_transfer_server.this.endpoint
+  value       = var.domain_name != "" ? var.domain_name : aws_transfer_server.this.endpoint
 }
 
 output "user_name" {

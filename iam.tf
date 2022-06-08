@@ -1,5 +1,5 @@
 resource "aws_iam_role" "this" {
-  name_prefix        = local.name
+  name_prefix        = "${var.git}-${local.name}"
   assume_role_policy = data.aws_iam_policy_document.this.json
   tags               = local.tags
 
@@ -19,7 +19,7 @@ data "aws_iam_policy_document" "this" {
 }
 
 resource "aws_iam_role_policy" "this" {
-  name   = local.name
+  name   = "${var.git}-${local.name}"
   role   = aws_iam_role.this.name
   policy = data.aws_iam_policy_document.role_policy.json
 }

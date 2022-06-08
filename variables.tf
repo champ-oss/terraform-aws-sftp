@@ -12,13 +12,13 @@ variable "git" {
 variable "bucket" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/transfer_user#home_directory"
   type        = string
-  default     = null
+  default     = ""
 }
 
 variable "name" {
   description = "Unique name for resources"
   type        = string
-  default     = null
+  default     = ""
 }
 
 variable "user_name" {
@@ -59,11 +59,11 @@ variable "security_policy_name" {
 variable "domain_name" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record#name"
   type        = string
-  default     = null
+  default     = ""
 }
 
 variable "zone_id" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record#zone_id"
   type        = string
-  default     = null
+  default     = ""
 }
