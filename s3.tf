@@ -1,6 +1,6 @@
 module "s3" {
   count           = var.bucket == "" ? 1 : 0 # Create a bucket if one is not passed in
-  source          = "github.com/champ-oss/terraform-aws-s3.git?ref=v1.0.14-8341cb0"
+  source          = "github.com/champ-oss/terraform-aws-s3.git?ref=v1.0.15-f83c51c"
   git             = var.git
   name            = local.name
   use_name_prefix = false
